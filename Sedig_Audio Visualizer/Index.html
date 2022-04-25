@@ -1,0 +1,62 @@
+<!--Bradley Alex Sedig-->
+
+  <html>
+    <head><title>AudioPlayer</title></head>
+    <link rel = "stylesheet" href= "Style.css"/>
+    <body>
+      <br>
+      <br>
+      <br>
+      <!--Create a set of sliders within divs as inputs-->
+      <div class = SliderSet>
+      <br>
+        <div class="slidercontainer">
+          <p class = sliderlabel >XEffector Value: <span id="Xoutput"></span></p>
+          <input type="range" min="1" max="14" value="50" class="slider" id="XRange">
+        </div>
+        <br>
+        <br>
+        <div class="slidercontainer">
+          <p class = sliderlabel >YEffector Value: <span id="Youtput"></span></p>
+          <input type="range" min="3" max="14" value="0" class="slider" id="YRange">
+        </div>
+        <br>
+        <br>
+        <div class="slidercontainer">
+          <p class = sliderlabel>RedEffector Value: <span id="Routput"></span></p>
+          <input type="range" min="100" max="255" value="50" class="slider" id="RRange">
+        </div>
+        <br>
+        <br>
+        <div class="slidercontainer">
+          <p class = sliderlabel>GreenEffector Value: <span id="Goutput"></span></p>
+          <input type="range" min="200" max="255" value="50" class="slider" id="GRange">
+        </div>
+        <br>
+        <br>
+        <div class="slidercontainer">
+          <p class = sliderlabel>BlueEffector Value: <span id="Boutput"></span></p>
+          <input type="range" min="100" max="255" value="50" class="slider" id="BRange">
+        </div>
+      </div>
+      <!--Buttons to activate transitions in JS-->
+      <button id = "StopButton" style="background-color: aqua; width: 30%; height:  200px; z-index: 2000;
+       position: relative; left: 37%;
+       border-radius: 50px;"> <center> Auto Transition: on</button>
+
+       <button id = "StartButton" style="background-color: aqua; width: 30%; height:  200px; z-index: 2000;
+       position: relative; left: 37%;
+       border-radius: 50px;"> <center> Auto Transition: off</button>
+      <div id="AudioPlayer">
+        <!--Choose audio file-->          <!--Accept specifies which files are allowed-->
+            <input type="file" id="Audiofile" accept="audio/*" />
+            <canvas class ="Vcanvas"  id="canvas">
+              
+            </canvas>
+
+            <!--Audio control interface-->
+            <audio id="audio" controls></audio>
+          </div>
+	<script src="main.js"></script>
+    </body>
+</html>
